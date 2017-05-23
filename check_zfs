@@ -217,7 +217,7 @@ sub convert2bytes {
     $suffix =~ s/[0-9.]+//g;
 
     my $number = $string;
-    $number =~ s/\D+//g;
+    $number =~ s/[a-zA-Z]+//g;
 
     return $number << 10 if ($suffix eq "K");
     return $number << 20 if ($suffix eq "M");
