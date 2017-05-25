@@ -206,7 +206,7 @@ while(<STAT>) {
 
 ## calling all goats!
 
-$msg = sprintf "ZPOOL %s : %s {Size:%s Used:%s Avail:%s Cap:%s} %s | size=%sB used=%sB\n", $pool, $health, $size, $used, $avail, $cap, $dmge, convert2bytes($size), convert2bytes($used);
+$msg = sprintf "ZPOOL %s : %s {Size:%s Used:%s Avail:%s Cap:%s Dedup:%s} %s | size=%sB used=%sB\n", $pool, $health, $size, $used, $avail, $cap, $dedup, $dmge, convert2bytes($size), convert2bytes($used);
 print $state, " ", $msg;
 exit ($ERRORS{$state});
 
